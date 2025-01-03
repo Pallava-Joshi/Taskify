@@ -6,7 +6,12 @@ const todoSlice = createSlice({
   reducers: {
     // Add a new todo
     addTodo: (state, action) => {
-      state.push({ id: Date.now(), title: action.payload, completed: false });
+      state.push({
+        id: Date.now(),
+        title: action.payload.title,
+        completed: false,
+        status: action.payload.status,
+      });
     },
 
     // Toggle the completion status of a todo

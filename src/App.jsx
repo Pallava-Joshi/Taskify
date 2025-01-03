@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="p-4 w-full h-dvh bg-zinc-500">
       <input
-        className="bg-slate-400 rounded-xl mr-2 p-2 text-white"
+        className="bg-slate-400 rounded-xl mr-2 p-2 text-white border-none"
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />

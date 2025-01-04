@@ -8,7 +8,7 @@ function Card({ title, completed, id }) {
   const [input, setInput] = useState(title);
 
   return (
-    <div className="bg-slate-600 w-64 h-24 p-2 my-2 rounded-xl shadow-xl text-white flex justify-between">
+    <div className="bg-slate-600 w-fit h-24 p-2 my-2 rounded-xl shadow-xl text-white flex justify-between">
       <input
         className="bg-slate-600 text-zinc-900 rounded-xl h-12 border-none"
         value={input}

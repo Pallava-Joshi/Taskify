@@ -6,9 +6,11 @@ const todoSlice = createSlice({
   reducers: {
     // Add a new todo
     addTodo: (state, action) => {
+      // console.log(action.payload);
+
       state.push({
         id: Date.now(),
-        title: action.payload.title,
+        title: action.payload.input,
         completed: false,
         status: action.payload.status,
       });

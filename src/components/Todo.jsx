@@ -1,11 +1,15 @@
 import Card from "./Card";
 import { useSelector } from "react-redux";
+import { useDroppable } from "@dnd-kit/core";
 
 function Todo() {
   const tasks = useSelector((state) => state.todos);
+  const { isOver, setNodeRef } = useDroppable({
+    id: "droppable",
+  });
 
   return (
-    <div className="col-span-1 items-center">
+    <div ref={setNodeRef} className="col-span-1 items-center h-dvh ">
       <h3>Todo</h3>
       {tasks.map((element) => {
         if (element.status === "todo") {

@@ -2,13 +2,28 @@ import { useDispatch } from "react-redux";
 import { toggleTodo, deleteTodo, updateTodo } from "../features/todo/todoSlice";
 import { RiDeleteBin6Fill } from "react-icons/ri";
 import { useState } from "react";
+import { useDraggable } from "@dnd-kit/core";
 
 function Card({ title, completed, id }) {
   const dispatch = useDispatch();
   const [input, setInput] = useState(title);
+  const { attributes, listeners, setNodeRef, transform } = useDraggable({
+    id: "draggable",
+  });
+  const style = transform
+    ? {
+        transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`,
+      }
+    : undefined;
 
   return (
-    <div className="bg-slate-600 w-fit h-24 p-2 my-2 rounded-xl shadow-xl text-white flex justify-between">
+    <div
+      ref={setNodeRef}
+      style={style}
+      {...listeners}
+      {...attributes}
+      className="bg-slate-600 w-fit h-24 p-2 my-2 rounded-xl shadow-xl text-white flex justify-between"
+    >
       <input
         className="bg-slate-600 text-zinc-900 rounded-xl h-12 border-none"
         value={input}

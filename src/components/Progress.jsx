@@ -1,10 +1,14 @@
 import Card from "./Card";
 import { useSelector } from "react-redux";
+import { useDroppable } from "@dnd-kit/core";
 
 function Progress() {
+  const { isOver, setNodeRef } = useDroppable({
+    id: "droppable",
+  });
   const tasks = useSelector((state) => state.todos);
   return (
-    <div className="col-span-1 items-center">
+    <div ref={setNodeRef} className="col-span-1 items-center h-dvh">
       <h3>Progress</h3>
       {tasks.map((element) => {
         if (element.status === "progress") {

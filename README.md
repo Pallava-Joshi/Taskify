@@ -1,8 +1,34 @@
-# React + Vite
+# **Task Management App**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beautiful and functional task management application built with **React** and **Redux**. It includes modern **glassmorphism** design and vibrant gradients, making task organization visually appealing and user-friendly.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Task Management App](./public/Taskify.png)
+
+## **Features**
+
+- **Task Management:**
+  - Add tasks with status options (Todo, In Progress, Review, Finished).
+  - Edit and delete tasks easily.
+- **Modern UI:**
+  - Glassmorphism effect on task cards and columns.
+  - Responsive design for all devices.
+- **Dynamic Interactions:**
+  - Real-time updates for task status.
+  - Hover animations for cards and buttons.
+- **Gradients and Themes:**
+  - A vibrant gradient background for a modern look.
+
+---
+
+## **Technologies Used**
+
+- **Frontend:**
+  - React
+  - Redux Toolkit (for state management)
+  - Tailwind CSS (for styling)
+- **Icons:**
+  - React Icons (for delete and interactive icons)
+
+---

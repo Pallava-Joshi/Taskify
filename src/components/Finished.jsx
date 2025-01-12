@@ -5,21 +5,16 @@ function Finished() {
   const tasks = useSelector((state) => state.todos);
 
   return (
-    <div className="col-span-1 items-center">
-      <h3>Finished</h3>
-      {tasks.map((element) => {
-        if (element.status === "finished") {
-          // console.log(element);
-          return (
-            <Card
-              key={element.id}
-              title={element.title}
-              completed={element.completed}
-              id={element.id}
-            />
-          );
-        }
-      })}
+    <div className="bg-white/50 border border-gray-300 shadow-lg rounded-xl p-4 backdrop-blur-md">
+      <h3 className="text-lg font-bold text-gray-800 mb-4">Finished</h3>
+      <div className="space-y-4">
+        {tasks.map((task) => {
+          if (task.status === "finished") {
+            return <Card key={task.id} {...task} />;
+          }
+          return null;
+        })}
+      </div>
     </div>
   );
 }
